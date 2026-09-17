@@ -23,7 +23,7 @@ RESOURCE_PATTERNS = {
 
 def command(args, **kwargs):
     result = subprocess.run(args, capture_output=True, text=True, encoding="utf-8", timeout=120, **kwargs)
-    assert result.returncode == 0, result.stdout + result.stderr
+    assert result.returncode == 0, (result.stdout or "") + (result.stderr or "")
     return result.stdout
 
 
@@ -90,6 +90,7 @@ def test_installed_wheel_loads_resources_away_from_checkout(wheel, tmp_path):
     command([sys.executable, "-m", "pip", "install", "--no-index", "--no-deps", "--target", str(target), str(wheel)], cwd=working)
     # -I discards cwd/PYTHONPATH. Fail on any editable/source-package fallback
     # before using resources; only ordinary installed runtime dependencies are shared.
+    # It also ignores PYTHONUTF8, so explicitly use UTF-8 for Korean output on Windows.
     code = '''import importlib, importlib.metadata, pathlib, sys
 root = pathlib.Path(sys.argv[1]).resolve()
 sys.path.insert(0, str(root))
@@ -105,7 +106,7 @@ from harness.__main__ import doctor
 doctor()
 print("ISOLATED_WHEEL_RESOURCES_OK")
 '''
-    output = command([sys.executable, "-I", "-c", code, str(target)], cwd=working)
+    output = command([sys.executable, "-I", "-X", "utf8", "-c", code, str(target)], cwd=working)
     assert "ISOLATED_WHEEL_RESOURCES_OK" in output
 
 

@@ -9,7 +9,7 @@
 
 | 검사 | 결과 |
 | --- | --- |
-| `python -m pytest -q` | 149개 통과, 11.46초 |
+| `python -m pytest -q` | 149개 통과, 10.21초 |
 | `python -m harness doctor` | 자료·후보군·프롬프트·설치 상태 정적 검사 통과 |
 | wheel 빌드·소스 밖 설치·리소스 로드 | 전체 테스트에 포함, 통과 |
 | 별도 새 가상환경에 실행 의존성만 설치 | 소스 복사본 삭제 후 8명 자료·CLI 도움말·doctor 통과. pytest 미설치 확인 |
@@ -19,6 +19,11 @@
 폐지된 설치 마법사 검사는 제거하고 새 시작 계약과 표준 패키징 검사를 추가했다.
 자료·프롬프트 해시는 아래 기존 값과 동일하다. 이번 정리는 실제 Claude 면접이나
 전체 사용자 리허설을 다시 실행한 결과가 아니다. Mac·Windows CI는 저장소 워크플로로 제공한다.
+
+최초 GitHub CI에서 Mac 두 환경은 통과했다. Windows에서는 테스트용 배치 파일의 인자 전달과
+격리 Python의 출력 인코딩 문제를 발견했다. 합성 실행기를 네이티브 Python 프로세스로 바꾸고
+격리 검사에 UTF-8을 명시했다. [최신 CI 결과](https://github.com/sueelly/founder-side-light/actions/workflows/tests.yml)에서
+운영체제별 검사를 확인할 수 있다. 이 검사는 실제 Windows Claude 연결·IME 화면 검증과 구분한다.
 
 ## 이전 자동 검사 기준
 

@@ -51,8 +51,18 @@ else:
     source.chmod(0o755)
     executable = source
     if os.name == "nt":
-        executable = tmp_path / "fake_claude.cmd"
-        executable.write_text(f'@"{sys.executable}" "{source}" %*\r\n', encoding="utf-8")
+        # Exercise native Windows argv handling, as with claude.exe. A .cmd
+        # shim reinterprets the multiline prompt/JSON through a shell and
+        # loses arguments before this fake process can inspect them.
+        executable = Path(sys.executable)
+        native_popen = subprocess.Popen
+
+        def launch_fake(command, *args, **kwargs):
+            if command[0] == str(executable) and "--print" in command:
+                command = [command[0], "-X", "utf8", str(source), *command[1:]]
+            return native_popen(command, *args, **kwargs)
+
+        monkeypatch.setattr(subprocess, "Popen", launch_fake)
     capture = tmp_path / "capture.json"
     monkeypatch.setenv("TEST_CLAUDE_CAPTURE", str(capture))
     monkeypatch.setenv("TEST_CLAUDE_MODE", "success")
