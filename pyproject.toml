@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "founder-side-light"
+version = "0.2.0"
+description = "Four local terminal personality interviews with Claude"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.12,<3", "prompt-toolkit>=3.0.50,<4"]
+
+[project.optional-dependencies]
+test = ["pytest>=9,<10"]
+
+[project.scripts]
+founder-light = "harness.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["harness*", "materials*", "prompts*", "templates*", "candidate_runtime*"]
+
+[tool.setuptools.package-data]
+harness = ["candidate_pools.json"]
+materials = ["company/*.md", "candidates/*/*.json", "candidates/*/*.txt", "candidates/*/*.pdf", "candidates/*/*.md"]
+prompts = ["*.md"]
+templates = ["*.md"]
+candidate_runtime = ["manifest.json", "personas/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
