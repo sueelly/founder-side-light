@@ -1,0 +1,237 @@
+{
+  "version": "persona-import-2",
+  "candidates": {
+    "P01": {
+      "sources": [
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P01/ground_truth/history.json",
+          "sha256": "e5f5c2758926496d65bcae9cd472ed52dd0f8c3b73ab77ec9773539c5212e654"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P01/ground_truth/motivations.md",
+          "sha256": "4a9be48dd7b7d9c4dbfead30e07b5265811a3a50f77f9ed8d981bb534ce12cc6"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P01/ground_truth/behavior_patterns.md",
+          "sha256": "80e5726e45b31f4c8994f2fb5428fad20be6fbc2bbb05520c914afa1c7001da4"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P01/ground_truth/traits.md",
+          "sha256": "46404da35cf82122109ab6b24d8e15db613a51c8142ff6baa64ca6dc3b3bf29e"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P01/ground_truth/self_expression.json",
+          "sha256": "d7dd70d9e454e63476a4f35e48c0a2a98285667ca09ff5895cccdaf5a757791b"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P01/ground_truth/current_state.json",
+          "sha256": "457f6aece1d5d3844771e004cae8fde3c2bfbb32594b27dfb6c0339bd743737f"
+        }
+      ],
+      "sha256": "9949648850c2b82f9c938afc23e7aaf72f1f906af57807e0c2ec711d9bb79fb6"
+    },
+    "P02": {
+      "sources": [
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P02/ground_truth/history.json",
+          "sha256": "bffce17731cb2520ea067558c51a49c46b6aa16e70b2b472c718072cdda8b81e"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P02/ground_truth/motivations.md",
+          "sha256": "bce8a5b85764580830e5606deac7de33823528ce0985f0fb23a1ef79c00889e0"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P02/ground_truth/behavior_patterns.md",
+          "sha256": "6bce65744694ea0567efcaee80c71488bc28d332ba02ac09cc5eeafa7c7b71eb"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P02/ground_truth/traits.md",
+          "sha256": "e9bb81b6f4dd54258f9a6fc7ee45a67ff3268d92b0b73828bad43b1bdcd5ec05"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P02/ground_truth/self_expression.json",
+          "sha256": "c684a01ef4cd6bca008bb70464edc2ed9b467008f40e349b836f42a35e8fcba4"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P02/ground_truth/current_state.json",
+          "sha256": "e7befcc10ee6f6491e0929c1cf1b616399849d35b9d094f523d179244f624e1e"
+        }
+      ],
+      "sha256": "6c8105c3a58827e129ed71795a21ef79bb24d6ce01e3c70de0d6e0bfa490a327"
+    },
+    "P03": {
+      "sources": [
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P03/ground_truth/history.json",
+          "sha256": "b506e6310a82d7043f6ff776c6d0d737f5e5094407f7e0f37b288dd6111f23c6"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P03/ground_truth/motivations.md",
+          "sha256": "8fd20b3406380ce48ff6a0b8584e483978441ca268a3bfc60db46dcbbff6888c"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P03/ground_truth/behavior_patterns.md",
+          "sha256": "3652a83b34dc194ec6f2844bcb7e19bce6f02b70b052112d87849d80bbfc42f2"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P03/ground_truth/traits.md",
+          "sha256": "78fad677af8c85f33b2e1be62144851a650cf2640cf37a384ef854d48e9889f2"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P03/ground_truth/self_expression.json",
+          "sha256": "6e96f0dfd53e6d97ecf6bfbc29174e72135b4ae9bb9b1772a3683bb806a004f8"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P03/ground_truth/current_state.json",
+          "sha256": "deea4cfd492b2c4d7b36588f6810274b45993f7703d0f5298d356959b3058425"
+        }
+      ],
+      "sha256": "2e35bc276d851960aebcdc7cad4f8e688340940043ac678359a749f53f396e4d"
+    },
+    "P04": {
+      "sources": [
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P04/ground_truth/history.json",
+          "sha256": "07bbcae477a3ab2068bbaf44ba298a3b2e63147b8bed8fbf9fc77bbe3a3f65e5"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P04/ground_truth/motivations.md",
+          "sha256": "ebb8ec44d4b58d1315ab3680d90190740ae4a1a36dd2b1b51a74ee1bc3475aea"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P04/ground_truth/behavior_patterns.md",
+          "sha256": "41f6ffda5756d4cb6d38c4d021dc420d49ad89ea14addae15cddd83a469402a7"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P04/ground_truth/traits.md",
+          "sha256": "f8bfc920fc385e0ddc304238464329cc1767620909009f73b07b7792f18d1e88"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P04/ground_truth/self_expression.json",
+          "sha256": "c36152f7de0fed857a10bc2d0710d81f397ba65d22250860aba9030996134b13"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P04/ground_truth/current_state.json",
+          "sha256": "930a990769a1356f6c74cd26deb75227c02490314d61f2be5b06f9abf5d020f6"
+        }
+      ],
+      "sha256": "2b5056a930881ad03380e0c21df2f9aaac5c761a3635bf8070e331b2c6ea61f1"
+    },
+    "P06": {
+      "sources": [
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P06/ground_truth/history.json",
+          "sha256": "16be39474aa1cc52175977eedcbe2ab2aa946b370b0f737aad4dfa9038aea7b8"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P06/ground_truth/motivations.md",
+          "sha256": "3e1bf7365389d374cb280ef5ae92bf3aea4cfdd15c40dd24e2ebebde39db0d78"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P06/ground_truth/behavior_patterns.md",
+          "sha256": "b805afef644b94f130b77fc003caf183a1dd199e44891621a1448e460087e4fc"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P06/ground_truth/traits.md",
+          "sha256": "d467f70623004cb3f4c3095ad32017138f9dd4681b05ead97e96e6de917fe916"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P06/ground_truth/self_expression.json",
+          "sha256": "da88e4e9d4438f5e29f29e74876c9356251bf5abf1edd9c76871e8ad29e7df24"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P06/ground_truth/current_state.json",
+          "sha256": "29e4dd56160eb88ee18dad2b696854907b3b55c6c75ae185ac4db3eb65e3c72d"
+        }
+      ],
+      "sha256": "5728bcec6bbb6b05860c5b1618cf5e542b8bf29d7c2635d6ecc23870cb4c8bb8"
+    },
+    "P07": {
+      "sources": [
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P07/ground_truth/history.json",
+          "sha256": "9d08aa896f3f60d53ec892438ad0539801be1cd94455891ce72c8337ef650de8"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P07/ground_truth/motivations.md",
+          "sha256": "75b5792313d55ecd64738c3cf83de598bfc38124e5bb7ca3dd65f7bb970243a4"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P07/ground_truth/behavior_patterns.md",
+          "sha256": "afe303a006c888fc1d20cdde2881bc2de7de5ae05e01d5d0766b63631e659175"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P07/ground_truth/traits.md",
+          "sha256": "d095b91822e80a4ac457fa65e04dfb0b6bb910d73f82dd55c9a4dc2419f105f9"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P07/ground_truth/self_expression.json",
+          "sha256": "dd5ac6d291afb14d664e1860244a0b87eb16ba89c16b580f5e3e88874f7acc1a"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P07/ground_truth/current_state.json",
+          "sha256": "95820fa395414ffb8eddbc05836004ffc90841b3cda5300791b31cb5f4ccea75"
+        }
+      ],
+      "sha256": "363b76f0a9e949d8957e03c0a2cbab0e199f5bcc803d5a1f89c0ed137630bb68"
+    },
+    "P08": {
+      "sources": [
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P08/ground_truth/history.json",
+          "sha256": "524b573ae20ea4087342f2d1c2baf6e32ce3d40095dc056beb8d553ab7c2426f"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P08/ground_truth/motivations.md",
+          "sha256": "5464d928695fe0a1d93633fb15bd6339a164bd78e77bdaf2f102e907e7707481"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P08/ground_truth/behavior_patterns.md",
+          "sha256": "4ff87e36bd5b85157efce2eb7d9e3358f0aade50f44ed146396dfd5dfb7e43c2"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P08/ground_truth/traits.md",
+          "sha256": "91cd34fc49079d9ab5a8fedb6aa9a2e6b411a5021c920b841df438f5b218b1df"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P08/ground_truth/self_expression.json",
+          "sha256": "a4765709250d2461869d7893a5342d6cf16f315b8c24f46b6335b8a18d913763"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P08/ground_truth/current_state.json",
+          "sha256": "ae697653d103eb48082f2d7b7345f5b7e901baa03fbfcbae3b54d849992119a2"
+        }
+      ],
+      "sha256": "228d6cde90ae6bec7301e81ecdbc4f982fbe70d0ca62f8e1525ebd3c261abe42"
+    },
+    "P10": {
+      "sources": [
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P10/ground_truth/history.json",
+          "sha256": "b2c64906fe7b173309f24088212488ab5c462441b3762350b208a93de6f5a16a"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P10/ground_truth/motivations.md",
+          "sha256": "60ad110ad4a08ad5903b7c4ad8684734707301cd71a57644c1f19f3b22be917d"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P10/ground_truth/behavior_patterns.md",
+          "sha256": "f4540c25c0b9dfe946414ab0c662ce65ec420b296cb3f325b4ce65361f463228"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P10/ground_truth/traits.md",
+          "sha256": "2a621ae6598a85cf70cee4fea9ac217c569c1fd4a64046136d175456187b0de0"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P10/ground_truth/self_expression.json",
+          "sha256": "7d617dc36b6c2b971e28ae86f13ed2e6690d034a551bb6f2e761245e0ea015bc"
+        },
+        {
+          "path": "web-server/models/worlds/corebridge-personality/candidates/P10/ground_truth/current_state.json",
+          "sha256": "5586734913636b15ea68e5c302f89cb61c9778f8a0165e46af47bbf133bb82db"
+        }
+      ],
+      "sha256": "85d59021fe8151c86717055575828c0aa5f3f8a1b5878a39f2c73ddd51f2f744"
+    }
+  }
+}
