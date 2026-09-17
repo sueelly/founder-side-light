@@ -1,0 +1,18 @@
+{
+  "candidate_id": "P07",
+  "name": "오시온",
+  "version": "HR-PERSONALITY-2.0",
+  "canonical_file": "resume.pdf",
+  "canonical_sha256": "bd4518014bb8e0b8c47dd3ee5368a3e4baa8cc92b8e18a3af53dbdc8c67aa5c5",
+  "text_file": "resume.txt",
+  "text_extraction": "pdftotext -layout; no editorial changes",
+  "pdf_application_field": "경영지원·사업운영",
+  "current_simulation_role": "경영지원·사업운영",
+  "role_context": "원본 PDF의 지원분야와 이번 실습 모집은 모두 경영지원·사업운영이다. 실제 업무·조건은 회사 공고로 설명하며, 원본 PDF 지원동기는 별도 보강본으로 대체하지 않는다.",
+  "current_stage": "personality_interview",
+  "document_screening": "passed",
+  "technical_interview": "passed",
+  "technical_reassessment": false,
+  "motivation_file": "support_motivation.md",
+  "motivation_policy": "원본 PDF 지원동기는 유지하고 별도 보강본을 공개 지원서 자료로 제공한다."
+}
