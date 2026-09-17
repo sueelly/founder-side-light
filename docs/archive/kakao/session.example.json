@@ -1,0 +1,17 @@
+{
+  "own_author": "내 카카오 표시 이름",
+  "kakao_backend": "computer-use",
+  "pairing_verified": false,
+  "shared_peer": {
+    "chat": "운영측 가상 후보와 면접하는 공용 대화방",
+    "author": "운영측 카카오 표시 이름"
+  },
+  "peers": {},
+  "operator": {
+    "base_url": "https://hr-training-13-209-237-72.sslip.io",
+    "workshop": "workshop",
+    "url": "https://hr-training-13-209-237-72.sslip.io/api/lite",
+    "email_env": "FOUNDER_OPERATOR_EMAIL",
+    "code_env": "FOUNDER_OPERATOR_CODE"
+  }
+}
