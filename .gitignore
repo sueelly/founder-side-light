@@ -1,0 +1,42 @@
+# Local interview sessions, verification output, and exported transcripts
+.runtime/
+.bootstrap/
+/transcript.pdf
+
+# Python environments, caches, and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+.claude/
+.codex/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+.credentials.json
+config/*.local.*
+
+# OS and editor temporary files
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+*.log
