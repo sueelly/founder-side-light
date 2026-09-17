@@ -1,0 +1,18 @@
+{
+  "candidate_id": "P09",
+  "name": "임서우",
+  "version": "HR-PERSONALITY-2.0",
+  "canonical_file": "resume.pdf",
+  "canonical_sha256": "1483ac30c4535055369f3bda1d6033339c639b96abaeb7251d589f64e52be41d",
+  "text_file": "resume.txt",
+  "text_extraction": "pdftotext -layout; no editorial changes",
+  "pdf_application_field": "경영지원·사업운영",
+  "current_simulation_role": "경영지원·사업운영",
+  "role_context": "원본 PDF의 지원분야와 이번 실습 모집은 모두 경영지원·사업운영이다. 실제 업무·조건은 회사 공고로 설명하며, 원본 PDF 지원동기는 별도 보강본으로 대체하지 않는다.",
+  "current_stage": "personality_interview",
+  "document_screening": "passed",
+  "technical_interview": "passed",
+  "technical_reassessment": false,
+  "motivation_file": "support_motivation.md",
+  "motivation_policy": "원본 PDF 지원동기는 유지하고 별도 보강본을 공개 지원서 자료로 제공한다."
+}
