@@ -9,11 +9,11 @@
 | --- | --- |
 | 한 번 배정·확정 후보군 | `harness/allocation.py`, `candidate_pools.json` |
 | 상태·잠금·원문·확정 사본 | `harness/storage.py`, `models.py` |
-| 역할 입력·후보 자료 | `harness/candidate.py`, `candidate_runtime/` |
+| 역할 입력·후보 자료 | `harness/candidate.py`, `harness/resources/candidate_runtime/` |
 | 인증·모델 실행·취소 | `harness/auth.py`, `provider.py` |
 | 시간·차례·마무리 | `harness/interview.py` |
 | 터미널·시작·사용자 확인 | `harness/terminal.py`, `onboarding.py`, `__main__.py` |
-| 로컬 최종 순위 | `harness/finalize.py`, `prompts/ranker.md` |
+| 로컬 최종 순위 | `harness/finalize.py`, `harness/resources/prompts/ranker.md` |
 
 사용자 진입점은 설치 후 `python -m harness start`다. 준비된 환경에서는 기준 작성·확인을 진행한다.
 자동 설치와 OS별 실행 파일, 시작 시 개발 테스트 실행은 제품 흐름에 포함하지 않는다.

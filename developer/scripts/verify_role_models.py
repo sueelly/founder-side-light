@@ -21,7 +21,7 @@ from harness.provider import Claude, ProviderError
 from harness.storage import atomic_write, canonical, resource, sha
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / ".runtime/verification/role-models"
 SYNTHETIC = "합성 개발 검증 데이터이며 실제 지원자 발언이나 사용자 평가가 아닙니다."
 INSIGHTS = "# 합성 검증 기준\n\n" + SYNTHETIC + "\n\n## 중요하게 보는 기준\n담당 범위의 책임감, 누락의 조기 공유, 동료와의 협업.\n"

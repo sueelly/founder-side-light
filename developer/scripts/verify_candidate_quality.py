@@ -20,7 +20,7 @@ from harness.provider import Claude, ProviderError
 from harness.storage import atomic_write, canonical, resource, sha
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / ".runtime/verification/candidate-quality"
 GROUPS = {"smoke": ("P07", "P03"), "remaining": ("P06", "P01", "P02", "P04", "P08", "P10"),
           "refined": ("P01", "P06", "P02")}

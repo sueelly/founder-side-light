@@ -27,7 +27,7 @@ def main():
         "messages": [], "closing_stage": "interview"}
     view = SimpleNamespace(state={"company": company()})
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
-    folder = Path(__file__).resolve().parents[1] / ".runtime/verification" / ("live-demo-" + stamp)
+    folder = Path(__file__).resolve().parents[2] / ".runtime/verification" / ("live-demo-" + stamp)
     folder.mkdir(parents=True, exist_ok=False)
     record = {"kind": "isolated-live-claude-demo", "model_requested": "sonnet",
         "runtime_sha256": runtime_fingerprint(), "calls": [], "status": "running",

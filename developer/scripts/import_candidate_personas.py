@@ -7,7 +7,7 @@ import re
 
 from harness.models import Persona
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 FILES = ("history.json", "motivations.md", "behavior_patterns.md", "traits.md", "self_expression.json", "current_state.json")
 EXPRESSION = ("voice", "self_expression", "memory_rule", "pressure_rule", "unknowns", "evidence_status")
 CURRENT = {"current_career_goal", "push_factors", "pull_factors", "priority_hierarchy", "role_expectation",
@@ -30,7 +30,7 @@ def cleaned_markdown(text):
 
 def build(source, destination=None):
     source = Path(source).resolve()
-    destination = (Path(destination) if destination else ROOT / "candidate_runtime").resolve()
+    destination = (Path(destination) if destination else ROOT / "harness/resources/candidate_runtime").resolve()
     if destination.is_relative_to(source):
         raise ValueError("참고 원본은 읽기 전용입니다")
     pools = json.loads((ROOT / "harness/candidate_pools.json").read_text())
@@ -57,7 +57,7 @@ def build(source, destination=None):
                 or current["candidate_id"] != cid or set(current["fields"]) != CURRENT
                 or history["as_of"] != current["as_of"]):
             raise ValueError("후보/현재 상태 계약 불일치: " + cid)
-        public = json.loads((ROOT / "materials/candidates" / cid / "application.json").read_text())
+        public = json.loads((ROOT / "harness/resources/materials/candidates" / cid / "application.json").read_text())
         value = {"id": cid, "name": public["name"], "as_of": current["as_of"],
             "history": [f["text"] for e in history["events"] for f in e["facts"]],
             "motivations": cleaned_markdown(documents["motivations.md"]),

@@ -8,7 +8,7 @@ import pytest
 
 from harness import candidate
 from harness.storage import resource, sha
-from scripts import import_candidate_personas as importer
+from developer.scripts import import_candidate_personas as importer
 
 
 IDS = ["P01", "P02", "P03", "P04", "P06", "P07", "P08", "P10"]

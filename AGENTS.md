@@ -1,6 +1,6 @@
 # 터미널 면접 하네스 작업 규칙
 
-먼저 README.md와 docs/terminal-interview-spec.md, docs/terminal-interview-plan.md를 읽습니다.
+먼저 README.md와 developer/docs/terminal-interview-spec.md, developer/docs/terminal-interview-plan.md를 읽습니다.
 
 - 이 워크트리만 수정합니다. 참고 원본 `~/Downloads/hr-training-runtime 2`는 읽기 전용입니다.
 - 사용자 합의에 따라 확정 후보군의 과거·현재·말투 자료만 지원자 역할용으로 가져올 수 있습니다. 미래 시나리오·근속 수치·운영 상태·자격 증명은 가져오지 않습니다.

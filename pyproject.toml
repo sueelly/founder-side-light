@@ -20,16 +20,23 @@ test = ["pytest>=9,<10", "setuptools>=68", "wheel>=0.45"]
 founder-light = "harness.__main__:main"
 
 [tool.setuptools]
-packages = ["harness", "materials", "prompts", "templates", "candidate_runtime"]
+packages = [
+    "harness",
+    "harness.resources",
+    "harness.resources.candidate_runtime",
+    "harness.resources.materials",
+    "harness.resources.prompts",
+    "harness.resources.templates",
+]
 include-package-data = false
 
 [tool.setuptools.package-data]
 harness = ["candidate_pools.json"]
-materials = ["company/*.md", "candidates/*/*.json", "candidates/*/*.txt", "candidates/*/*.pdf", "candidates/*/*.md"]
-prompts = ["*.md"]
-templates = ["*.md"]
-candidate_runtime = ["manifest.json", "personas/*.json"]
+"harness.resources.materials" = ["README.md", "company/*.md", "candidates/*/*.json", "candidates/*/*.txt", "candidates/*/*.pdf", "candidates/*/*.md"]
+"harness.resources.prompts" = ["*.md"]
+"harness.resources.templates" = ["*.md"]
+"harness.resources.candidate_runtime" = ["manifest.json", "personas/*.json"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["developer/tests"]
 addopts = "-ra"

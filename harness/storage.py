@@ -90,8 +90,18 @@ def validate_markdown(markdown, required):
     return markdown
 
 
+_RESOURCE_PACKAGES = {
+    "candidate_runtime": "harness.resources.candidate_runtime",
+    "materials": "harness.resources.materials",
+    "prompts": "harness.resources.prompts",
+    "templates": "harness.resources.templates",
+}
+
+
 def resource(package, name):
-    return files(package).joinpath(name).read_text(encoding="utf-8")
+    """Read a bundled resource without exposing its storage layout to callers."""
+    package_name = _RESOURCE_PACKAGES.get(package, package)
+    return files(package_name).joinpath(name).read_text(encoding="utf-8")
 
 
 SCHEMA = "founder-terminal-1"

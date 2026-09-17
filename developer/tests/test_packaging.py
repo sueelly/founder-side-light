@@ -11,13 +11,20 @@ import zipfile
 
 import pytest
 
-ROOT = Path(__file__).resolve().parents[1]
-PACKAGES = ("harness", "materials", "candidate_runtime", "prompts", "templates")
+ROOT = Path(__file__).resolve().parents[2]
+PACKAGES = (
+    "harness",
+    "harness/resources",
+    "harness/resources/materials",
+    "harness/resources/candidate_runtime",
+    "harness/resources/prompts",
+    "harness/resources/templates",
+)
 RESOURCE_PATTERNS = {
     "harness": ("candidate_pools.json",),
-    "materials": ("company/*.md", "candidates/*/*.json", "candidates/*/*.txt", "candidates/*/*.pdf", "candidates/*/*.md"),
-    "candidate_runtime": ("manifest.json", "personas/*.json"),
-    "prompts": ("*.md",), "templates": ("*.md",),
+    "harness/resources/materials": ("README.md", "company/*.md", "candidates/*/*.json", "candidates/*/*.txt", "candidates/*/*.pdf", "candidates/*/*.md"),
+    "harness/resources/candidate_runtime": ("manifest.json", "personas/*.json"),
+    "harness/resources/prompts": ("*.md",), "harness/resources/templates": ("*.md",),
 }
 
 
@@ -34,9 +41,10 @@ def wheel(tmp_path_factory):
     source.mkdir()
     for name in ("pyproject.toml", "README.md"):
         shutil.copyfile(ROOT / name, source / name)
-    for package in PACKAGES:
-        shutil.copytree(ROOT / package, source / package,
-                        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "*.pyo"))
+        for package in PACKAGES:
+            shutil.copytree(ROOT / package, source / package,
+                        ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "*.pyo"),
+                        dirs_exist_ok=True)
     # These synthetic unlisted local files must not become wheel resources.
     (source / ".env").write_text("SYNTHETIC_LOCAL_VALUE=not-a-credential\n")
     (source / "harness/local-credentials.json").write_text('{"synthetic":true}')
@@ -72,9 +80,9 @@ def test_wheel_contains_every_runtime_resource_without_local_files(wheel):
                     name = path.relative_to(ROOT).as_posix()
                     assert name in names, name
                     assert archive.read(name) == path.read_bytes(), name
-        assert "prompts/candidate.md" in names
-        assert len([name for name in names if name.startswith("candidate_runtime/personas/")]) == 8
-        assert len([name for name in names if name.startswith("materials/candidates/") and name.endswith("/application.json")]) == 8
+        assert "harness/resources/prompts/candidate.md" in names
+        assert len([name for name in names if name.startswith("harness/resources/candidate_runtime/personas/")]) == 8
+        assert len([name for name in names if name.startswith("harness/resources/materials/candidates/") and name.endswith("/application.json")]) == 8
         assert not any(any(part in name for part in (".runtime/", ".env", "__pycache__/", "tests/", "scripts/",
                                                     "local-credentials", "bootstrap", ".venv/")) for name in names)
         metadata_path = next(name for name in names if name.endswith(".dist-info/METADATA"))
@@ -94,7 +102,7 @@ def test_installed_wheel_loads_resources_away_from_checkout(wheel, tmp_path):
     code = '''import importlib, importlib.metadata, pathlib, sys
 root = pathlib.Path(sys.argv[1]).resolve()
 sys.path.insert(0, str(root))
-for name in ("harness", "materials", "candidate_runtime", "prompts", "templates"):
+for name in ("harness", "harness.resources", "harness.resources.materials", "harness.resources.candidate_runtime", "harness.resources.prompts", "harness.resources.templates"):
     package = importlib.import_module(name)
     assert pathlib.Path(package.__file__).resolve().is_relative_to(root), name
 from harness.candidate import validate_bundle, runtime_fingerprint
@@ -115,7 +123,7 @@ def test_git_archive_excludes_accidentally_tracked_state_credentials_and_caches(
     repository.mkdir()
     shutil.copyfile(ROOT / ".gitattributes", repository / ".gitattributes")
     public = ["README.md", "pyproject.toml", "harness/__init__.py", "harness/candidate_pools.json",
-              "candidate_runtime/personas/P07.json", "prompts/candidate.md", "templates/insights.md",
+              "harness/resources/candidate_runtime/personas/P07.json", "harness/resources/prompts/candidate.md", "harness/resources/templates/insights.md",
               "tests/test_sample.py", ".github/workflows/tests.yml"]
     private = [".runtime/terminal-light/state.json", ".runtime/terminal-light/01-P07/transcript.md",
                "rehearsal-results/verification.json", "REHEARSAL-NOTICE.json", ".env", ".env.production",

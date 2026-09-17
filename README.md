@@ -89,6 +89,25 @@ macOS와 Windows에서는 편집기를 열며, 다른 환경에서는 표시된 
 별도 실습은 `python -m harness --session .runtime/practice-2 start`처럼 새 경로를 지정합니다.
 여기의 `python`은 위에서 만든 가상환경의 Python 경로로 바꿔 실행하세요.
 
+## 폴더 안내
+
+처음 사용하는 사람은 `README.md`만 보면 됩니다. 면접 중 직접 만지는 파일은 세션 폴더의
+`insights.md`와 각 후보의 작성 중인 `feedback.md`뿐입니다.
+
+```text
+README.md                 시작 방법과 면접 진행 안내
+harness/                  면접을 진행·기록하는 실행 엔진
+  resources/materials/    회사 공개 자료와 후보 제출 자료
+  resources/prompts/      지원자·면접관·순위 역할 지시문
+  resources/templates/    insights.md·feedback.md 기본 양식
+developer/                개발자용 테스트와 품질 검사 도구
+developer/docs/           동작 스펙과 검증 기록
+.runtime/                 실행할 때 자동으로 생기는 면접 기록 (Git 제외)
+```
+
+`harness/resources/` 안의 자료는 실행에 필요한 패키지 데이터입니다. 내용을 직접 고치면
+진행 중 세션의 자료 해시와 맞지 않아 재개가 중단될 수 있습니다.
+
 ## 개발과 검증
 
 가상환경의 Python으로 실행합니다. 테스트 도구는 개발할 때만 설치합니다.
@@ -104,7 +123,7 @@ GitHub Actions는 macOS·Windows의 합성 테스트와 정적 검사를 실행�
 
 현재는 실습용입니다. 실제 네 명 리허설에서 최종 순위 생성 시간 초과와 마무리 질문 중복이 관찰됐고,
 후보가 설정에 없는 사실을 덧붙이는 경우도 남아 있습니다. 최종 순위 생성에 실패하면 기록은 보존되며
-같은 `start` 명령으로 재시도할 수 있습니다. [검증 범위와 알려진 한계](docs/verification.md)를 참고하세요.
+같은 `start` 명령으로 재시도할 수 있습니다. [검증 범위와 알려진 한계](developer/docs/verification.md)를 참고하세요.
 
-[동작 스펙](docs/terminal-interview-spec.md) · [개발 계획](docs/terminal-interview-plan.md) ·
-[후보 대화 품질 기록](docs/candidate-quality-verification.md)
+[동작 스펙](developer/docs/terminal-interview-spec.md) · [개발 계획](developer/docs/terminal-interview-plan.md) ·
+[후보 대화 품질 기록](developer/docs/candidate-quality-verification.md)
