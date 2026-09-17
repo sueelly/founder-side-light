@@ -1,0 +1,40 @@
+# Keep local sessions and development output out of GitHub source archives,
+# even if a local file was accidentally tracked. These rules complement .gitignore.
+.runtime export-ignore
+.bootstrap export-ignore
+rehearsal-results export-ignore
+REHEARSAL-NOTICE.json export-ignore
+/transcript.pdf export-ignore
+
+.venv export-ignore
+venv export-ignore
+__pycache__ export-ignore
+*.py[cod] export-ignore
+.pytest_cache export-ignore
+.mypy_cache export-ignore
+.ruff_cache export-ignore
+.coverage export-ignore
+.coverage.* export-ignore
+htmlcov export-ignore
+build export-ignore
+dist export-ignore
+*.egg-info export-ignore
+
+.env export-ignore
+.env.* export-ignore
+.claude export-ignore
+.codex export-ignore
+*.pem export-ignore
+*.key export-ignore
+*.p12 export-ignore
+*.pfx export-ignore
+credentials.json export-ignore
+.credentials.json export-ignore
+config/*.local.* export-ignore
+
+.DS_Store export-ignore
+._* export-ignore
+Thumbs.db export-ignore
+*.swp export-ignore
+*.swo export-ignore
+*.log export-ignore

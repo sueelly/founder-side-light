@@ -15,7 +15,7 @@ def claude_executable():
     candidate = Path.home() / ".local" / "bin" / ("claude.exe" if os.name == "nt" else "claude")
     if candidate.is_file():
         return str(candidate)
-    raise ValueError("Claude가 없습니다. Mac은 실행.command, Windows는 실행.bat를 여세요.")
+    raise ValueError("Claude CLI가 없습니다. README의 Claude 설치 안내를 따른 뒤 claude auth login으로 로그인하세요.")
 
 
 def claude_environment():
@@ -64,4 +64,4 @@ def ensure_claude_login(*, interactive=False, executable=None, runner=None):
             result = runner([executable, "auth", "login"], cwd=scratch, env=env)
             if result.returncode == 0 and authenticated():
                 return executable
-    raise ValueError("Claude 로그인 확인에 실패했습니다. 실행 파일을 다시 열어 로그인하세요.")
+    raise ValueError("Claude 로그인 확인에 실패했습니다. claude auth login으로 본인 계정에 로그인한 뒤 다시 실행하세요.")

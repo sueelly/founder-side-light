@@ -72,7 +72,7 @@ def test_init_defaults_without_config_and_preserves_assignment(tmp_path, monkeyp
 def test_noninteractive_start_and_run_reject_without_consuming_input(tmp_path, monkeypatch):
     from harness import __main__ as cli
     monkeypatch.setattr(cli.sys.stdin, "isatty", lambda: False)
-    assert cli.main(["start"]) == 1
+    assert cli.main(["--session", str(tmp_path), "start"]) == 1
     assert cli.main(["--session", str(tmp_path), "run"]) == 1
 
 
@@ -156,3 +156,30 @@ def test_active_resume_does_not_reconfirm_insights(session, monkeypatch):
         runner.shutdown()
     monkeypatch.setattr(terminal, "run_terminal", fake_terminal)
     assert cli.run_interview(session, ask=lambda prompt: pytest.fail("진행 중 면접 재확인"))
+
+
+def test_startup_test_flag_is_removed():
+    from harness import __main__ as cli
+    with pytest.raises(SystemExit) as error:
+        cli.main(["start", "--check-startup"])
+    assert error.value.code == 2
+
+
+def test_completed_cli_start_can_show_results_without_tty_or_auth(completed, monkeypatch):
+    from harness import __main__ as cli
+    from harness.finalize import prepare_final
+    from test_terminal_contract import Provider
+    prepare_final(completed, Provider())
+    monkeypatch.setattr(cli.sys.stdin, "isatty", lambda: False)
+    monkeypatch.setattr(cli, "ensure_claude_login", lambda: pytest.fail("완료된 결과에 인증 호출"))
+    monkeypatch.setattr("harness.onboarding.ensure_claude_login", lambda **kw: pytest.fail("완료된 결과에 인증 호출"))
+    assert cli.main(["--session", str(completed.directory), "start"]) == 0
+
+
+def test_noninteractive_new_start_never_allocates(tmp_path, monkeypatch):
+    from harness import __main__ as cli
+    monkeypatch.setattr(cli.sys.stdin, "isatty", lambda: False)
+    monkeypatch.setattr("harness.onboarding.ensure_claude_login", lambda **kw: pytest.fail("터미널 없이 인증"))
+    directory = tmp_path / "session"
+    assert cli.main(["--session", str(directory), "start"]) == 1
+    assert not directory.exists()

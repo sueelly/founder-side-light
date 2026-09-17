@@ -1,5 +1,5 @@
 {
-  "source_worktree": "/Users/kimhyejoo/orca/projects/founder-side",
+  "source_project": "founder-side",
   "source_commit": "5a07438",
   "note": "main 작업 디렉터리의 미커밋 공개 자료·카카오 CLI 어댑터만 선별 복사. 운영자·런타임·자격 증명 제외.",
   "files": [
@@ -99,26 +99,6 @@
       "sha256": "0a6f9ef3e154a07af5aa5de2aa078bd967d2679558535bc07e48afc00e21aaeb"
     },
     {
-      "source": "materials/candidates/P05/resume.txt",
-      "destination": "materials/candidates/P05/resume.txt",
-      "sha256": "41c5c143bc887777a56e6b0bfdea63557782db95e65dbec5084e5391a8ec46fd"
-    },
-    {
-      "source": "materials/candidates/P05/support_motivation.md",
-      "destination": "materials/candidates/P05/support_motivation.md",
-      "sha256": "d45648578fcd6dad067274c04bb5e254824511b4860e88e6e643d449c2753374"
-    },
-    {
-      "source": "materials/candidates/P05/resume.pdf",
-      "destination": "materials/candidates/P05/resume.pdf",
-      "sha256": "a0bf8daec49e7d575a518f21e74d013836de6928816fc16e57f95eeb30642dc5"
-    },
-    {
-      "source": "materials/candidates/P05/application.json",
-      "destination": "materials/candidates/P05/application.json",
-      "sha256": "deb836961e7e33a4cc65a9d4252a5e0288dde9e2a1356ae50250cce077cfa5ab"
-    },
-    {
       "source": "materials/candidates/P06/resume.txt",
       "destination": "materials/candidates/P06/resume.txt",
       "sha256": "4b0b704493ae698939877b1019c1c62e26272ae48d40852d68c3650023c5a8ab"
@@ -177,26 +157,6 @@
       "source": "materials/candidates/P08/application.json",
       "destination": "materials/candidates/P08/application.json",
       "sha256": "5ac7348c9cf96581afa7d489cfdb9feed219e02019a2bf33fc0bfa976fce5c13"
-    },
-    {
-      "source": "materials/candidates/P09/resume.txt",
-      "destination": "materials/candidates/P09/resume.txt",
-      "sha256": "2f505eb31b3a117a5b60f25758c1343c64be9e685bc022f7330bc1272389666f"
-    },
-    {
-      "source": "materials/candidates/P09/support_motivation.md",
-      "destination": "materials/candidates/P09/support_motivation.md",
-      "sha256": "14a97589a091f547a65ed30ffc4435f5bc06792c494f9fb84f8556e0c61dc180"
-    },
-    {
-      "source": "materials/candidates/P09/resume.pdf",
-      "destination": "materials/candidates/P09/resume.pdf",
-      "sha256": "1483ac30c4535055369f3bda1d6033339c639b96abaeb7251d589f64e52be41d"
-    },
-    {
-      "source": "materials/candidates/P09/application.json",
-      "destination": "materials/candidates/P09/application.json",
-      "sha256": "00a10bb690704c74cccc8525da26a139585f33970d59684720f54e320fb433b7"
     },
     {
       "source": "materials/candidates/P10/resume.txt",

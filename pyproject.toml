@@ -6,17 +6,22 @@ build-backend = "setuptools.build_meta"
 name = "founder-side-light"
 version = "0.2.0"
 description = "Four local terminal personality interviews with Claude"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = ["pydantic>=2.12,<3", "prompt-toolkit>=3.0.50,<4"]
 
+[project.urls]
+Repository = "https://github.com/sueelly/founder-side-light"
+
 [project.optional-dependencies]
-test = ["pytest>=9,<10"]
+test = ["pytest>=9,<10", "setuptools>=68", "wheel>=0.45"]
 
 [project.scripts]
 founder-light = "harness.__main__:main"
 
-[tool.setuptools.packages.find]
-include = ["harness*", "materials*", "prompts*", "templates*", "candidate_runtime*"]
+[tool.setuptools]
+packages = ["harness", "materials", "prompts", "templates", "candidate_runtime"]
+include-package-data = false
 
 [tool.setuptools.package-data]
 harness = ["candidate_pools.json"]

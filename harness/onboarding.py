@@ -19,18 +19,21 @@ def open_document(path):
     print(f"작성할 파일: {path}", flush=True)
 
 
-def start(directory, ask=input, *, check_startup=False, model="sonnet"):
+def start(directory, ask=input, *, model="sonnet", allow_input=True):
     from .__main__ import finalize, run_interview, session_lock
-    from .checks import StartupChecks
-    ensure_claude_login(interactive=True)
     directory = Path(directory).resolve()
     with session_lock(directory):
-        if check_startup:
-            StartupChecks().wait()
-        existing = (directory / "state.json").exists()
-        session = Session(directory) if existing else Session.create(directory, model=model)
-        if session.state["phase"] != "complete":
-            session.validate_runtime()
+        session = Session(directory) if (directory / "state.json").exists() else None
+        if session is not None and session.state["phase"] == "complete":
+            session.check_integrity()
+            print(f"4회 면접과 로컬 순위 저장이 완료됐습니다: {directory / 'ranking.md'}")
+            return 0
+        if not allow_input:
+            raise ValueError("실제 사용자 입력을 받는 터미널에서 python -m harness start를 실행하세요.")
+        ensure_claude_login()
+        if session is None:
+            session = Session.create(directory, model=model)
+        session.validate_runtime()
         while True:
             if session.state["phase"] == "complete":
                 session.check_integrity()

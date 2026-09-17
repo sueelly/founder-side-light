@@ -31,7 +31,7 @@ def doctor():
     try:
         from prompt_toolkit import PromptSession  # noqa: F401 — installed runtime dependency
     except ImportError as exc:
-        raise ValueError("터미널 입력 의존성이 없습니다. 실행 파일을 다시 열어 설치하세요.") from exc
+        raise ValueError("터미널 입력 의존성이 없습니다. README의 Python 패키지 설치 명령을 실행하세요.") from exc
     print("공개 후보 자료·확정 후보군 8명의 지원자 자료·프롬프트 정적 검사 통과")
     print("실행 4명 / 첫 면접관 사람 1800초 / 이후 Claude 면접관 1200초 / 지원자는 모두 Claude")
     print("인사이트 자동 추출 없음 / 매 후보 실제 사용자 평가 필수 / 최종 순위 로컬 저장")
@@ -131,8 +131,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="터미널·Claude 4명 인성 면접")
     parser.add_argument("--session", default=".runtime/terminal-light", help="세션 폴더 (하위 명령 앞에 지정)")
     commands = parser.add_subparsers(dest="command", required=True)
-    start_parser = commands.add_parser("start", help="설치·로그인 확인 후 로컬 4명 면접 진행")
-    start_parser.add_argument("--check-startup", action="store_true", help="로컬 테스트·doctor 실패 시 시작 차단")
+    start_parser = commands.add_parser("start", help="인사이트 확인 후 로컬 4명 면접 시작·재개")
     start_parser.add_argument("--model", default="sonnet")
     commands.add_parser("login", help="본인 Claude 로그인 확인·실행")
     init = commands.add_parser("init", help="기본 설정으로 새 세션 준비")
@@ -147,11 +146,11 @@ def main(argv=None):
     restore.add_argument("--confirmed-restore", action="store_true", required=True)
     args = parser.parse_args(argv)
     try:
-        if args.command in {"start", "run"} and not sys.stdin.isatty():
-            raise ValueError("실제 사용자 입력을 받는 터미널에서 실행하세요. Mac은 실행.command, Windows는 실행.bat를 여세요.")
+        if args.command == "run" and not sys.stdin.isatty():
+            raise ValueError("실제 사용자 입력을 받는 터미널에서 python -m harness run을 실행하세요.")
         if args.command == "start":
             from .onboarding import start
-            return start(args.session, check_startup=args.check_startup, model=args.model)
+            return start(args.session, model=args.model, allow_input=sys.stdin.isatty())
         if args.command == "login":
             ensure_claude_login(interactive=True)
             print("Claude 로그인 확인 완료")

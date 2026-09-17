@@ -1,33 +1,53 @@
 # Founder Side · Light
 
-터미널에서 총 **4명**의 인성 면접을 진행하고 원문과 평가, 최종 순위를 로컬 문서로 저장합니다.
-첫 면접관은 사용자, 이후 세 면접관은 Claude입니다. 지원자는 네 면접 모두 Claude가 맡습니다.
-모든 후보는 기술면접을 통과했으며 회사·직무는 **코어브릿지웍스 / 경영지원·사업운영 담당자**입니다.
+터미널에서 네 명의 인성 면접을 진행하고 대화·평가·최종 순위를 문서로 저장합니다.
+첫 면접관은 사용자, 다음 세 면접관은 Claude입니다. 지원자는 모두 Claude가 맡습니다.
+회사·직무는 **코어브릿지웍스 / 경영지원·사업운영 담당자**이며 모두 기술면접을 통과한 후보입니다.
 
-## 시작
+## 시작하기
 
-Mac은 `실행.command`, Windows는 `실행.bat`를 여세요. OS를 자동 감지하고 필요한 실행 환경과
-본인 Claude 로그인을 확인합니다. 이미 준비됐다면 별도의 연결 설정을 묻지 않습니다.
-카카오톡·Claude Desktop·Computer Use·운영 서버는 사용하지 않습니다. Claude 모델 호출에는
-인터넷 연결과 본인 Claude 계정이 필요합니다.
+**Python 3.11 이상**과 **본인 계정으로 로그인한 Claude Code CLI**가 필요합니다.
+Claude가 없다면 [공식 설치 안내](https://code.claude.com/docs/en/quickstart)를 따르고,
+로그인이 필요하면 터미널에서 `claude auth login`을 실행하세요. 모델 호출에는 인터넷과 계정 사용량이 필요합니다.
 
-자동으로 열리는 `insights.md`에 면접 기준을 작성하고, 터미널에 표시된 내용을 확인한 뒤
-`시작`을 입력하세요. 자세한 안내는 [setup.md](setup.md)에 있습니다.
+이 저장소를 `git clone https://github.com/sueelly/founder-side-light.git`으로 받거나,
+GitHub의 **Code → Download ZIP**으로 받아 압축을 푸세요. 받은 폴더에서 터미널을 열고 실행합니다.
 
-```text
-기준 확인 → 사람 면접 최대 30분 → 사용자 평가·인사이트 변경 여부
-         → AI 면접 최대 20분   → 사용자 평가·인사이트 변경 여부
-         → AI 면접 최대 20분   → 사용자 평가·인사이트 변경 여부
-         → AI 면접 최대 20분   → 사용자 평가·인사이트 변경 여부
-         → 최종 기준으로 네 명 순위 생성 → 로컬 저장
+**macOS / Linux**
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -c requirements.lock.txt .
+.venv/bin/python -m harness start
 ```
 
-## 면접 화면
+**Windows PowerShell**
 
-첫 면접에서는 질문을 그대로 입력하고 Enter를 누릅니다. 지원자의 질문에 대한 답도 같은 방식입니다.
-지원자 응답 대기 중 입력한 질문은 접수하지 않으며 작성하던 내용은 입력란에 남깁니다.
-다음 세 면접은 두 Claude 역할이 차례대로 대화합니다. 한 발화가 완성되면 터미널과 문서에
-즉시 반영되고, 생성 중에는 역할과 남은 시간이 표시됩니다.
+```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -c requirements.lock.txt .
+.\.venv\Scripts\python.exe -m harness start
+```
+
+가상환경 활성화 스크립트나 실행 정책 변경은 필요 없습니다. 설치는 처음 한 번만 하고,
+이후에는 마지막 `start` 명령으로 이어서 진행합니다. 별도 설정 파일이나 설치 마법사는 없습니다.
+
+첫 실행에 `.runtime/terminal-light/insights.md`가 만들어집니다. 면접 기준을 작성하고,
+터미널에 표시된 내용을 확인한 뒤 `시작`을 입력하세요. 빈 기준으로는 면접이 시작되지 않습니다.
+macOS와 Windows에서는 편집기를 열며, 다른 환경에서는 표시된 경로를 직접 편집하면 됩니다.
+
+```text
+기준 확인 → 사람 면접 최대 30분 → 본인 평가·기준 변경 여부 확인
+         → AI 면접 최대 20분   → 본인 평가·기준 변경 여부 확인
+         → AI 면접 최대 20분   → 본인 평가·기준 변경 여부 확인
+         → AI 면접 최대 20분   → 본인 평가·기준 변경 여부 확인
+         → 최종 기준으로 네 명 순위 저장
+```
+
+## 면접 진행
+
+첫 면접에서는 질문을 입력하고 Enter를 누릅니다. 이후 세 면접에서는 두 Claude 역할이 차례대로 대화합니다.
+발화가 완성될 때마다 화면과 기록 문서에 반영됩니다.
 
 ```text
 면접관: 오시온님 면접 시작하겠습니다
@@ -38,80 +58,53 @@ Mac은 `실행.command`, Windows는 `실행.bat`를 여세요. OS를 자동 감�
 
 | 입력 | 동작 |
 | --- | --- |
-| 일반 텍스트 또는 `q 질문` | 첫 면접에서 직접 발화 |
+| 일반 텍스트 | 첫 면접에서 직접 질문하거나 후보 질문에 답하기 |
 | `/last` | 사람 면접 마무리 요청 |
 | `/end` | 마무리 안내에 대한 후보 답을 받은 뒤 종료 |
-| `/status` | 남은 시간과 현재 상태 확인 |
-| `/retry` | 실패하거나 중단된 현재 모델 차례 재시도 |
-| Ctrl+C | 모델 실행을 정리하고 중단. 마감은 유지 |
+| `/status` | 현재 상태·남은 시간 확인 |
+| `/retry` | 실패한 모델 차례 재시도 |
+| Ctrl+C | 중단. 같은 명령으로 재개하며 마감 시각은 유지 |
 
-처음 1~2분은 자기소개와 기본 사항, 마지막 2분은 후보 질문과 마지막 말에 사용합니다.
-시작·종료 문구는 하네스가 관리하고 마지막 발화는 `수고하셨습니다`입니다.
-모델 생성·오류 대기도 시간에 포함합니다. 재개 때 마감이 지났으면 종료부터 기록합니다.
+응답 생성 중 새 질문은 접수하지 않습니다. 모델 대기·오류 시간도 면접 시간에 포함합니다.
+매 면접 뒤 `feedback.md`의 **종합 평가·근거·우려·확인할 점**을 직접 작성하세요.
+인사이트를 고쳤으면 `수정`, 그대로면 `그대로`를 입력합니다. 다음 면접은 다시 `시작`을 입력해야 열립니다.
+기준을 자동으로 추가하거나 사용자 평가를 대신 작성하지 않습니다.
 
-## 기준과 평가
+## 기록과 재개
 
-기준 원본은 세션의 **`insights.md`**입니다. 직접 편집하거나 Claude에게 고칠 내용을 구체적으로
-지시할 수 있습니다. 면접에서 기준을 자동 추출하지 않습니다. 각 면접은 시작 시점의 기준 사본을 사용합니다.
-
-면접 종료 후 `feedback.md`에서 **종합 평가·근거·우려·확인할 점**을 직접 작성합니다.
-우려가 없으면 `없음`이라고 쓰세요. 인사이트를 고쳤으면 `수정`, 그대로면 `그대로`를 선택합니다.
-빈 평가 또는 실제 변경과 다른 선택은 확정하지 않습니다. 다음 면접은 다시 `시작`을 입력해야 열립니다.
-
-네 번째 평가 이후 최종 기준으로 네 명을 비교해 `ranking.md`와 `ranking.json`을 저장합니다.
-실제 후보 발언과 사용자 평가를 근거로 인용하며, 이미 확정된 결과를 재실행으로 다시 생성하지 않습니다.
-운영 서버 전송과 접수 절차는 없습니다.
-
-## 후보와 입력 범위
-
-첫 초기화에서 [확정 후보군](harness/candidate_pools.json)으로 P07을 첫 번째에 배정합니다.
-나머지 세 구간에서 각각 한 명을 추첨하고 뒤 세 순서를 섞습니다. 배정은 세션 내 고정입니다.
-
-지원자는 본인의 과거·현재 경험·말투와 공개 회사 자료, 해당 면접 대화만 받습니다.
-면접관은 공개 지원 자료와 기준, 실제 대화만 받습니다. 최종 순위에는 실제 면접과 사용자 평가를 사용합니다.
-구간, 미래 시나리오, 근속 수치를 모델에 제공하지 않습니다. 후보 전용 자료는 8명분을 별도 패키지에 둡니다.
-후보의 말투와 기존 한계를 살리되, 일부러 어눌하게 만들거나 새 사실·약점을 지어내지 않도록 프롬프트를 구성했습니다.
-
-## 기록과 재시작
-
-기본 세션 폴더는 `.runtime/terminal-light`입니다. 같은 시작 파일을 다시 열면 이어집니다.
+기록은 모두 실행한 폴더의 `.runtime/terminal-light/`에 남고 Git에는 포함되지 않습니다.
 
 | 파일 | 내용 |
 | --- | --- |
-| `insights.md` | 사용자가 편집하는 현재 기준 |
-| `01-P07/` ~ `04-…/transcript.md` | 하네스가 갱신하는 면접 원문 |
-| 각 후보 `feedback.md` / `feedback.confirmed.md` | 작성 중 평가 / 확정 평가 |
-| 각 후보 `insights.before.md` / `insights.after.md` | 면접 시작 / 피드백 확정 기준 |
-| `state.json` | 배정·시계·차례·확정 기록. 명령으로만 변경 |
-| `ranking.md` / `ranking.json` | 로컬 최종 순위·근거·해시 |
+| `insights.md` | 사용자가 작성·수정하는 현재 면접 기준 |
+| `01-P07/` ~ `04-…/transcript.md` | 후보별 면접 원문 |
+| 각 후보의 `feedback.md` | 사용자가 작성하는 평가 |
+| `feedback.confirmed.md`, `insights.before.md`, `insights.after.md` | 확정 평가와 기준 사본 |
+| `ranking.md`, `ranking.json` | 네 번째 평가 이후 최종 순위·근거 |
+| `state.json` | 하네스가 관리하는 배정·시간·진행 상태 |
 
-원문과 확정 사본은 직접 편집하지 않습니다. 외부 변경·잘림을 감지하면 멈춥니다.
-단순 출력 중단은 확정 상태에서 복구하고, 외부 수정본을 덮어쓸 때는 `restore-records --confirmed-restore`로
-명시적으로 요청해야 합니다. 기록 ID `local-message-*`는 이 하네스의 로컬 ID입니다.
-
-기존 카카오 세션 `.runtime/light`는 자동 변환하거나 덮어쓰지 않습니다. 새 세션 경로를 사용합니다.
-자료나 프롬프트가 세션 생성 이후 변경됐다면 기존 버전을 복원하거나 새 세션을 시작해야 합니다.
+직접 편집할 파일은 `insights.md`와 작성 중인 `feedback.md`입니다. 원문·확정 사본·상태를 수정하면 검증에서 멈춥니다.
+중단 후에는 같은 폴더에서 `start`를 다시 실행하세요. 배정과 마감 시각은 바뀌지 않습니다.
+자료·프롬프트가 바뀐 버전으로 진행 중 세션을 재개할 수는 없습니다.
+별도 실습은 `python -m harness --session .runtime/practice-2 start`처럼 새 경로를 지정합니다.
+여기의 `python`은 위에서 만든 가상환경의 Python 경로로 바꿔 실행하세요.
 
 ## 개발과 검증
 
+가상환경의 Python으로 실행합니다. 테스트 도구는 개발할 때만 설치합니다.
+
 ```sh
-python3 -m venv .venv
-source .venv/bin/activate
 python -m pip install -c requirements.lock.txt -e '.[test]'
 python -m pytest -q
 python -m harness doctor
-python -m harness start
 ```
 
-Windows는 `.venv\Scripts\Activate.ps1`로 환경을 활성화하거나 시작 파일을 사용합니다.
-수동 명령도 실제 사용자 확인과 평가가 필요합니다.
+`doctor`는 로컬 자료·설치 상태를 검사합니다. 실제 Claude 응답이나 대화 품질을 보증하지 않습니다.
+GitHub Actions는 macOS·Windows의 합성 테스트와 정적 검사를 실행합니다.
 
-```sh
-python -m harness --session .runtime/terminal-light init
-python -m harness --session .runtime/terminal-light run
-python -m harness --session .runtime/terminal-light feedback --insights unchanged
-python -m harness --session .runtime/terminal-light finalize
-```
+현재는 실습용입니다. 실제 네 명 리허설에서 최종 순위 생성 시간 초과와 마무리 질문 중복이 관찰됐고,
+후보가 설정에 없는 사실을 덧붙이는 경우도 남아 있습니다. 최종 순위 생성에 실패하면 기록은 보존되며
+같은 `start` 명령으로 재시도할 수 있습니다. [검증 범위와 알려진 한계](docs/verification.md)를 참고하세요.
 
-`doctor`는 자료·프롬프트·설치 상태의 정적 검사입니다. 실제 모델 응답이나 사용자 네 명 실습을 증명하지 않습니다.
-[검증 기록](docs/verification.md), [스펙](docs/terminal-interview-spec.md), [구현 계획](docs/terminal-interview-plan.md)을 참고하세요.
+[동작 스펙](docs/terminal-interview-spec.md) · [개발 계획](docs/terminal-interview-plan.md) ·
+[후보 대화 품질 기록](docs/candidate-quality-verification.md)

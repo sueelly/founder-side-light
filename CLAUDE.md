@@ -1,7 +1,9 @@
 # 이 프로젝트에서의 Claude 작업
 
 AGENTS.md, README.md와 docs/terminal-interview-spec.md를 따릅니다.
-사용자가 설치·시작·재개를 요청하면 setup.md대로 실제 사용자가 입력할 터미널을 엽니다.
+사용자가 설치·시작·재개를 요청하면 README의 명령을 사용하고 실제 사용자가 입력할 터미널을 엽니다.
+시작 명령은 `python -m harness start`입니다. Python 환경과 Claude 로그인이 준비돼 있으면
+세션의 insights.md 작성 여부와 기준 확인부터 진행합니다. 별도 설정 파일·설치 마법사를 만들지 않습니다.
 기본 세션은 `.runtime/terminal-light`입니다. 진행 중인 세션을 지우거나 중복 실행하지 않습니다.
 카카오, Computer Use, 운영 서버 제출은 없습니다.
 

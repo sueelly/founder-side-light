@@ -51,3 +51,23 @@ def test_interactive_login_once_then_recheck_and_no_desktop_dependency(capsys):
     ensure_claude_login(interactive=True, executable="synthetic-claude", runner=run)
     assert calls == ["status", "login", "status"]
     assert "Desktop" not in capsys.readouterr().out
+
+
+def test_missing_auth_directs_explicit_login_without_launching_browser():
+    calls = []
+    def run(command, **kwargs):
+        calls.append(command)
+        return subprocess.CompletedProcess(command, 0, '{"loggedIn":false}')
+    with pytest.raises(ValueError, match="claude auth login"):
+        ensure_claude_login(executable="synthetic-claude", runner=run)
+    assert calls == [["synthetic-claude", "auth", "status"]]
+
+
+def test_missing_cli_directs_readme_installation(monkeypatch, tmp_path):
+    from harness import auth
+    monkeypatch.setattr(auth.shutil, "which", lambda name: None)
+    monkeypatch.setattr(auth.Path, "home", lambda: tmp_path)
+    with pytest.raises(ValueError, match="README") as caught:
+        auth.claude_executable()
+    assert "실행.command" not in str(caught.value)
+    assert "실행.bat" not in str(caught.value)
