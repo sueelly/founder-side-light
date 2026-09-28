@@ -1,0 +1,20 @@
+[
+  {
+    "attempt": 1,
+    "kind": "launcher-original",
+    "outcome": "provider_timeout",
+    "configured_timeout_seconds": 120,
+    "observed_at": 1789663036.477928,
+    "phase_after": "finalizing",
+    "completed_interviews": 4
+  },
+  {
+    "attempt": 2,
+    "kind": "same-launcher-restart",
+    "outcome": "provider_timeout",
+    "configured_timeout_seconds": 120,
+    "observed_at": 1789663185.190146,
+    "phase_after": "finalizing",
+    "completed_interviews": 4
+  }
+]

@@ -1,0 +1,620 @@
+{
+  "kind": "independent-rehearsal-record-verification",
+  "verified_at": "2026-09-17T16:39:54.179175+00:00",
+  "status": "interviews_verified_finalization_incomplete",
+  "checks": [
+    "finalizing_phase_and_state_sha256",
+    "notice_baseline_source_and_copy_byte_hashes",
+    "four_interviews_modes_fixed_deadlines_utterances_and_confirmed_snapshots",
+    "all_committed_artifact_byte_hashes_and_reconstructed_documents",
+    "state_and_notice_unchanged_during_verification"
+  ],
+  "warnings": [
+    {
+      "kind": "finalization_incomplete",
+      "final_result_present": false,
+      "ranking_files_present": false
+    }
+  ],
+  "interviews": [
+    {
+      "number": 1,
+      "candidate_id": "P07",
+      "mode": "human",
+      "started_at": 1789658620.5728052,
+      "deadline_at": 1789660420.5728052,
+      "closed_at": 1789659201.642426,
+      "duration_seconds": 581.069621,
+      "limit_seconds": 1800,
+      "closing_delay_seconds": 0,
+      "utterances": 27,
+      "candidate_utterances": 12,
+      "interviewer_utterances": 15,
+      "human_interviewer_utterances": 10,
+      "agent_interviewer_utterances": 0,
+      "candidate_response_characters": {
+        "unit": "Unicode code points, including whitespace",
+        "min": 151,
+        "max": 594,
+        "mean": 360.75,
+        "median": 336.5,
+        "total": 4329
+      },
+      "insights_before_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+      "insights_after_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+      "feedback_sha256": "007d7d718574b25dd21b8870b0b42ca3a5833e4185e72959ebdd422ef06917d7",
+      "transcript_sha256": "793d385d39ccbf7d7ce143667304a51b1f9c2e413cacccdf9c134d324e3426fd"
+    },
+    {
+      "number": 2,
+      "candidate_id": "P01",
+      "mode": "agent",
+      "started_at": 1789659223.011364,
+      "deadline_at": 1789660423.011364,
+      "closed_at": 1789660357.028997,
+      "duration_seconds": 1134.017633,
+      "limit_seconds": 1200,
+      "closing_delay_seconds": 0,
+      "utterances": 51,
+      "candidate_utterances": 24,
+      "interviewer_utterances": 27,
+      "human_interviewer_utterances": 0,
+      "agent_interviewer_utterances": 22,
+      "candidate_response_characters": {
+        "unit": "Unicode code points, including whitespace",
+        "min": 55,
+        "max": 595,
+        "mean": 391.33,
+        "median": 437.0,
+        "total": 9392
+      },
+      "insights_before_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+      "insights_after_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+      "feedback_sha256": "ff615b8439857e53b9b8e5e2f77bdc1e59e29c8b9fbf8d54477bb3fb8a12e4ee",
+      "transcript_sha256": "554f9498aa634b427b6a13c41ef11f924bf07d3c530b1cbe39415592e2c6e04c"
+    },
+    {
+      "number": 3,
+      "candidate_id": "P06",
+      "mode": "agent",
+      "started_at": 1789660401.81675,
+      "deadline_at": 1789661601.81675,
+      "closed_at": 1789661523.0392432,
+      "duration_seconds": 1121.222493,
+      "limit_seconds": 1200,
+      "closing_delay_seconds": 0,
+      "utterances": 51,
+      "candidate_utterances": 24,
+      "interviewer_utterances": 27,
+      "human_interviewer_utterances": 0,
+      "agent_interviewer_utterances": 22,
+      "candidate_response_characters": {
+        "unit": "Unicode code points, including whitespace",
+        "min": 62,
+        "max": 695,
+        "mean": 444.96,
+        "median": 478.0,
+        "total": 10679
+      },
+      "insights_before_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+      "insights_after_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+      "feedback_sha256": "7b710fb61dd8e6559f4a01cb098af575393ab5984c03bff660af08fc82a0a7cb",
+      "transcript_sha256": "10c7e9760047c6ed40d46c6be880462f17d315b29f38fbcb9532bec2d76e0625"
+    },
+    {
+      "number": 4,
+      "candidate_id": "P08",
+      "mode": "agent",
+      "started_at": 1789661646.4029598,
+      "deadline_at": 1789662846.4029598,
+      "closed_at": 1789662782.0973947,
+      "duration_seconds": 1135.694435,
+      "limit_seconds": 1200,
+      "closing_delay_seconds": 0,
+      "utterances": 53,
+      "candidate_utterances": 25,
+      "interviewer_utterances": 28,
+      "human_interviewer_utterances": 0,
+      "agent_interviewer_utterances": 23,
+      "candidate_response_characters": {
+        "unit": "Unicode code points, including whitespace",
+        "min": 44,
+        "max": 670,
+        "mean": 410.08,
+        "median": 407,
+        "total": 10252
+      },
+      "insights_before_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+      "insights_after_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+      "feedback_sha256": "3b329f035fc2f0c2349a3a1c6a13b714fee88d268172e1584dbce11ef91fa981",
+      "transcript_sha256": "6d552294dcaae98ac4b485eae3714ed4e24d907e99535c6646deb4c5e0197479"
+    }
+  ],
+  "limitations": [
+    "사람 역할의 질문·기준·평가는 사용자 허가에 따른 에이전트 리허설 입력이며 실제 사용자의 판단이 아니다.",
+    "저장된 결과와 기준 파일의 일관성을 검증한다. 실제 호출·입력 행위나 내용의 진실성·대화 품질을 독립적으로 증명하지 않는다.",
+    "해시는 서명이 아니다. REHEARSAL-NOTICE의 기준 목록 자체를 신뢰하며 목록 밖의 파일은 동일성을 검증하지 않는다.",
+    "인용은 해당 후보 발언·확정 평가의 정확한 연속 부분문자열이어야 한다. 순위 설명의 의미적 타당성은 별도 검토가 필요하다.",
+    "일반 발화에는 마감 이후 기록을 허용하지 않는다. 종료 기록 지연은 protocol_note와 함께 별도 보고한다."
+  ],
+  "finalization_complete": false,
+  "session_id": "9f412ddc-721f-40a1-89fa-b4b8c571ad4a",
+  "phase": "finalizing",
+  "session_state_sha256": "ff864cce18d0e2346495b69586de8ba09edb529a2b278ac53817dec980bf3c7c",
+  "state_file_sha256": "09df5f450676fe9a9c0024eaa614bfa99f24f5978c8a1de92de5881646c65f21",
+  "notice_sha256": "6bd4a91a9e181bfe5a7203d80e94f4731a63674f3132b720caf22724d49496e9",
+  "runtime_sha256": "da6cae54d251579070bbc394af84c01c3a1f2c3fe504449559dfc27a39ff2c5b",
+  "baseline": {
+    "files_checked": 76,
+    "files": [
+      {
+        "path": "candidate_runtime/__init__.py",
+        "sha256": "3b1d0b10d9d9d63aa5c357f0fef12a788b25c55bd837b248a0418a897e3aec8c",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/manifest.json",
+        "sha256": "ef5c7cddb02554aaf7266e2548137cb2182e9e9f417687704884fcfcaec3947c",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/personas/P01.json",
+        "sha256": "9949648850c2b82f9c938afc23e7aaf72f1f906af57807e0c2ec711d9bb79fb6",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/personas/P02.json",
+        "sha256": "6c8105c3a58827e129ed71795a21ef79bb24d6ce01e3c70de0d6e0bfa490a327",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/personas/P03.json",
+        "sha256": "2e35bc276d851960aebcdc7cad4f8e688340940043ac678359a749f53f396e4d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/personas/P04.json",
+        "sha256": "2b5056a930881ad03380e0c21df2f9aaac5c761a3635bf8070e331b2c6ea61f1",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/personas/P06.json",
+        "sha256": "5728bcec6bbb6b05860c5b1618cf5e542b8bf29d7c2635d6ecc23870cb4c8bb8",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/personas/P07.json",
+        "sha256": "363b76f0a9e949d8957e03c0a2cbab0e199f5bcc803d5a1f89c0ed137630bb68",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/personas/P08.json",
+        "sha256": "228d6cde90ae6bec7301e81ecdbc4f982fbe70d0ca62f8e1525ebd3c261abe42",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "candidate_runtime/personas/P10.json",
+        "sha256": "85d59021fe8151c86717055575828c0aa5f3f8a1b5878a39f2c73ddd51f2f744",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/__init__.py",
+        "sha256": "a09f59f99717c8f8761808171e9fc5e2cdc5ea10a1bf34bd4f954403f7224c9d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/__main__.py",
+        "sha256": "d370abbad4d4b4aead4712edb9ecc21095651525b90711131569c5839d003217",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/allocation.py",
+        "sha256": "cf1fbdf5bac6ff41f9ad24c4ab678163fd8305c059e207c719d06ce653c3899d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/auth.py",
+        "sha256": "0e30f5bcc27f4bbef04a3051eec1b236da9ff5079f30e9b4a68bc231f4ab328d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/candidate.py",
+        "sha256": "fab68b5e9d63e791df78f1c2bd0f4c83e33f7ce291a686d48f49c378e972004e",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/candidate_pools.json",
+        "sha256": "1f2fa47b94eff3c23584c5eedf1fdf40af754d047371168441347032d97b8495",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/checks.py",
+        "sha256": "28474ac2077a33f7a1c5f06975dac824bba19b0987dc5b0a10873124b9e3b21b",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/finalize.py",
+        "sha256": "7bb025744370850e4603951716079ae9789075d1cfdf4410b1c8c3be0bd2734e",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/interview.py",
+        "sha256": "9cb626824850f7b05716bc700c5fa6b0e8abc94008838919607cbba829c34c5a",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/models.py",
+        "sha256": "c1712e554d3f0328215cfc6cb7cb6bb2e8fbb451068a8fe1a2a23346018d0609",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/onboarding.py",
+        "sha256": "6b3a32aed2dc51a11e991511caa981d89802fde89d36fc8afea0cc7668caf479",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/provider.py",
+        "sha256": "c217fd0d5cbe6a9dd9c79210386ed536d104325265090b456606cee05734b56d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/storage.py",
+        "sha256": "763b5663f4d1d8a9efc873063b453cf59bab0ba1af677bb81176201130b2fb86",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "harness/terminal.py",
+        "sha256": "86b9745fcd98923299e1414fb7854519c69252e49f874b3fd172ee45558fa343",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/README.md",
+        "sha256": "323be7ab44cee94dbc39350efd62a8f34f0a0b7f676c0cb49850d3e4fd9b0147",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P01/application.json",
+        "sha256": "6cde551936215366b6848df9f775798165a25019f4d0d55feeb86e18cb4e8157",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P01/resume.pdf",
+        "sha256": "9d7dbe1ba2c2ea44be6b986a1e534f32994cb4b72a9d88fb1f26c5986b7fd5dd",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P01/resume.txt",
+        "sha256": "83bd4ef606f2b4bf0c9f5fef319e9768c3cacb1e581e77943b4d818cb059650e",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P01/support_motivation.md",
+        "sha256": "079c96ac9ed3b3de3e74ead120834544e7f75b993cddd897e70d467baab60f5b",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P02/application.json",
+        "sha256": "8fed79604beb4f3a9f92edc6b5aa411625ae6caaf89f4ce5d8f3352d1f748cfb",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P02/resume.pdf",
+        "sha256": "3f3b0251769b2f81d0413a6967601b1681db4e52c3a514fbb6ab0d8fb477866c",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P02/resume.txt",
+        "sha256": "f0331ced94916df5b6307471f92792a956d2b042cf4c7af0f77d623aac373830",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P02/support_motivation.md",
+        "sha256": "4975bb32a9bcf89c83d1d376e5b247459e8069810d5ca8ad1e98e5188da887ce",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P03/application.json",
+        "sha256": "2dd83ceeb270d282b561be0d7464222c25aa167a23da75224bf521458d27ca9b",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P03/resume.pdf",
+        "sha256": "6baa62fe414fbac753876f3a70f271cff193a927592826061e4124ab8b2e6af7",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P03/resume.txt",
+        "sha256": "195b24241272a9a8f852f2a74b49c278ee8ce08a258ac672093918bbacf75755",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P03/support_motivation.md",
+        "sha256": "2915b0bdaa99b3d9050fd00bbeac39e947a6eb4bdff1050a451eaab74c6f2af0",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P04/application.json",
+        "sha256": "0a6f9ef3e154a07af5aa5de2aa078bd967d2679558535bc07e48afc00e21aaeb",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P04/resume.pdf",
+        "sha256": "ecca45cea7edc1f48658e3e8fb7918e85b56a4da4e26b063260d37aba0376758",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P04/resume.txt",
+        "sha256": "16c3d7f4e85f0f5fd750a5acbfc9d8760595206088c3238febb4e1106a9384c5",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P04/support_motivation.md",
+        "sha256": "aca633752818f1c684aed37cf02c3c4d4f7d0399744736ed1f882dcd0451601d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P05/application.json",
+        "sha256": "deb836961e7e33a4cc65a9d4252a5e0288dde9e2a1356ae50250cce077cfa5ab",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P05/resume.pdf",
+        "sha256": "a0bf8daec49e7d575a518f21e74d013836de6928816fc16e57f95eeb30642dc5",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P05/resume.txt",
+        "sha256": "41c5c143bc887777a56e6b0bfdea63557782db95e65dbec5084e5391a8ec46fd",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P05/support_motivation.md",
+        "sha256": "d45648578fcd6dad067274c04bb5e254824511b4860e88e6e643d449c2753374",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P06/application.json",
+        "sha256": "9e55f4b6074b6856c8deb839e0378cdd3802772d408ff9d77e96d896764d589d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P06/resume.pdf",
+        "sha256": "bd003b6aa0ec60aad6a47a45d6fe51401a51ce7c9654ddbc727c4f3111560891",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P06/resume.txt",
+        "sha256": "4b0b704493ae698939877b1019c1c62e26272ae48d40852d68c3650023c5a8ab",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P06/support_motivation.md",
+        "sha256": "ec3faa12f329d7a48d35d1621cde62f1265b36a803e218fc0a424e3b4c9e8839",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P07/application.json",
+        "sha256": "466ab716c683464e97430a721841582c891cdd29e7a7a78981d47bdbb6c9ed0e",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P07/resume.pdf",
+        "sha256": "bd4518014bb8e0b8c47dd3ee5368a3e4baa8cc92b8e18a3af53dbdc8c67aa5c5",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P07/resume.txt",
+        "sha256": "730d35d33d08042930f5696e98fb5e83dee318248c7a5d62aa4bda1de81f519a",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P07/support_motivation.md",
+        "sha256": "b8e7331fe21cdf52bd3a4859a9bb0954847a8cb10d3ed51cbcdcb0afd75ca4ed",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P08/application.json",
+        "sha256": "5ac7348c9cf96581afa7d489cfdb9feed219e02019a2bf33fc0bfa976fce5c13",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P08/resume.pdf",
+        "sha256": "861990a5663e0f4b6816d78eec3d34210ba1be8912bb751dd441ca34e176cbb7",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P08/resume.txt",
+        "sha256": "ddc35b7e2e1f7714818151248cf6da6b4d73398111c4183a3f6f523a0fe16a33",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P08/support_motivation.md",
+        "sha256": "09c7ecbcdf8cbb18e65285e65b5fabbfc5f43f486e10be49300d59ffae9cda16",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P09/application.json",
+        "sha256": "00a10bb690704c74cccc8525da26a139585f33970d59684720f54e320fb433b7",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P09/resume.pdf",
+        "sha256": "1483ac30c4535055369f3bda1d6033339c639b96abaeb7251d589f64e52be41d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P09/resume.txt",
+        "sha256": "2f505eb31b3a117a5b60f25758c1343c64be9e685bc022f7330bc1272389666f",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P09/support_motivation.md",
+        "sha256": "14a97589a091f547a65ed30ffc4435f5bc06792c494f9fb84f8556e0c61dc180",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P10/application.json",
+        "sha256": "7ef14eb5fd8713e69f53523380d7b1953dcdbf7258277945f3e1c9f65925cb82",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P10/resume.pdf",
+        "sha256": "6c1f1e2a1a1a20bd78671cc02cdb62e41d53dabe1200b17ffbb09cad695d634c",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P10/resume.txt",
+        "sha256": "e29557c41f88c7a4c68338c7d6040eeac2ed91299fc858dada62640e3c223787",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/candidates/P10/support_motivation.md",
+        "sha256": "fd7138ffa0218dae63812270fc3d64d35a9cfb2eea8938e7405039eb7b24d67d",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/company/company_intro.md",
+        "sha256": "f6b0d010be7e113c2e0d4e77a328a037bf6aeb556de2dd0a4c442b3725324dab",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/company/culture_public.md",
+        "sha256": "91f602c57d88c5c5c9af8b238b3ab8691bf7e2fb5f873a051711ca2d7822cb43",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "materials/company/job_posting.md",
+        "sha256": "6fdee63abef8bfd4731e37e336b9e871699294f3ae7be98d21fcc8dbaf548f06",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "prompts/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "prompts/candidate.md",
+        "sha256": "0851eaab09c6c22fefb9a4319c4e440fb4315a4304ec90f5437069344576d594",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "prompts/interviewer.md",
+        "sha256": "5c31a3196e5e23f8091fb6844a9d80eff63c40692a1ff6a9ac811acd3754a2af",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "prompts/ranker.md",
+        "sha256": "e2ed98b8bc5a7a05f2091d6373be4716d893510d7e2e42ffba45d95565f3945c",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "templates/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "templates/feedback.md",
+        "sha256": "ac85460bcc2855fa8b1462966f01985379a6bfe7777cd17b08a351d2b82b5088",
+        "source_matches": true,
+        "copy_matches": true
+      },
+      {
+        "path": "templates/insights.md",
+        "sha256": "aa9c9a4f8cc4a5f0bf009dcca5a26624bf6abbd641c3ee5bccdf8759a8ff113a",
+        "source_matches": true,
+        "copy_matches": true
+      }
+    ]
+  },
+  "final_insights_sha256": "e893ee784115835060e947d5df8a840dc5ae58b283faad6280fd1eedb44da346",
+  "ranking_verification": {
+    "status": "skipped",
+    "reason": "네 명 평가 완료, 최종 순위 생성 미완료",
+    "checks_skipped": [
+      "final_result_hash",
+      "ranking_files",
+      "unique_ranks",
+      "ranking_evidence"
+    ]
+  },
+  "artifacts_checked": 16
+}
