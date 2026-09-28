@@ -3,6 +3,9 @@
 .bootstrap/
 /transcript.pdf
 
+# Rebuild the archive from the versioned rehearsal-results directory.
+/rehearsal-results.zip
+
 # Python environments, caches, and build artifacts
 .venv/
 venv/
